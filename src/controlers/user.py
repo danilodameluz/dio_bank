@@ -28,7 +28,7 @@ def _list_users():
 
 
 @app.route("/", methods=["GET", "POST"])
-def handle_user():
+def list_and_create_user():
     if request.method == "POST":
         _create_user()
         return {"message": "User created!"}, HTTPStatus.CREATED
